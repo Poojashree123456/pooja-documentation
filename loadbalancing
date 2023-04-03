@@ -1,0 +1,69 @@
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+
+events {
+        worker_connections 768;
+}
+
+http {
+        include /etc/nginx/mime.types;
+        default_type application/octet-stream;
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
+
+upstream nodes
+{
+server localhost:9001;
+server localhost:9002;
+server localhost:9003;
+}
+
+
+server
+{
+listen 80;
+server_name localhost;
+location /static
+{
+alias /usr/share/nginx/html;
+index index.html index.htm;
+}
+location /
+{
+proxy_pass http://nodes;
+}
+
+}
+
+server
+{
+listen localhost:9001;
+server_name localhost;
+location /
+{
+root /usr/share/nginx/app1;
+index index.html index.htm;
+}
+}
+server
+{
+listen localhost:9002;
+server_name localhost;
+location /
+{
+root /usr/share/nginx/app2;
+index index.html index.htm;
+}
+}
+server
+{
+listen localhost:9003;
+server_name localhost;
+location /
+{
+root /usr/share/nginx/app3;
+index index.html index.htm;
+}
+}
+}
