@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pod
+  namespace: pooja-1
+  labels:
+    app: demo-role
+spec:
+  serviceAccountName: pooja-demo-sa
+  containers:
+    - name: my-container
+      image: registry1-docker-io.repo3.cci.nokia.net/nginxinc/nginx-unprivileged
+      ports:
+        - containerPort: 8080
