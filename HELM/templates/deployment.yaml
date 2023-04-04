@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.global.deploymentName }}
+  namespace: pooja
+  labels:
+    app1: nginx1
+    name1: poojatry
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nginx
+        name: poojatry
+    spec:
+      containers:
+        - name: nginx
+          image: registry1-docker-io.repo3.cci.nokia.net/nginxinc/nginx-unprivileged
+          imagePullPolicy: Always
+          volumeMounts:
+            {{- include "volumeMounts.index-html" . |nindent 9 }
+            - name: nginx-secret
+              mountPath: /etc/nginx/
+              readOnly: true
+      volumes:
+        - name: index-html-file
+          configMap:
+            name: {{ .Values.global.configMap.name }}
+       - name: nginx-secret
+          secret:
+            secretName: nginx-config-secret
