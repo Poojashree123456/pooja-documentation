@@ -1,0 +1,11 @@
+global:
+  image:
+    repo: registry1-docker-io.repo3.cci.nokia.net/nginxinc/nginx-unprivileged
+    name: nginx
+    tag: "latest"
+  deploymentName: basic-deployment
+  configMap:
+    name: index-html
+    key1: "World"
+  serviceName: basic-deploy-svc-1
+~
