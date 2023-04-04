@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pooja-ingress
+  namespace: pooja
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+   # kubernetes.io/ingress.class: poojashree
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+   # nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+spec:
+  rules:
+  #  - host: pooja.com
+     - http:
+        paths:
+          - pathType: Prefix
+            path: /menu
+            backend:
+              service:
+                name: pooja-deploy-svc
+                port:
+                  number: 9376
+#  tls:
+#    - hosts:
+#        - pooja.com
+#      secretName: pooja-chart-citm-ingress-token-zp2zb
+
