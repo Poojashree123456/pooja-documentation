@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-host
+  namespace: pooja
+  labels:
+    app: nginx
+    name: deploy
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nginx
+        name: deploy
+    spec:
+      hostNetwork: true
+      serviceAccountName: specialsa
+      containers:
+        - name: nginx
+          image: registry1-docker-io.repo3.cci.nokia.net/nginxinc/nginx-unprivileged
+          imagePullPolicy: Always
+#          securityContext:
+#            runAsUser: 0
+#            runAsGroup: 0
+           # fsGroup: 0
+          ports:
+            - containerPort: 7999
+              hostPort: 7999
+          volumeMounts:
+            - mountPath: /etc/nginx/
+              name: nginx-conf-file-host
+              readOnly: true
+            - mountPath: /usr/share/nginx/html/
+              name: index-html-file
+              readOnly: true
+      volumes:
+        - name: index-html-file
+          configMap:
+            name: index-htm
+        - name: nginx-conf-file-host
+          configMap:
+            name: configuration-file
+
