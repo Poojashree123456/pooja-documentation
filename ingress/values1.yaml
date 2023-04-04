@@ -1,0 +1,19 @@
+global:
+  securityContext:
+    runAsUser: 1000
+    runAsGroup:  1000
+    fsGroup: 1000
+controller:
+  ingressClass: poojashree
+  runOnEdge: false
+  httpPort: 1010
+  httpsPort: 2010
+  kind: Deployment
+  service:
+    type: NodePort
+    nodePorts:
+      http: 32080
+      https: 32443
+    targetPorts:
+      http: 1010
+      https: 2010
