@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: index-htm
+  namespace: pooja
+data:
+  index.html: |
+    <html>
+    <body>
+    <h1>Pooja</h1>
+    </body>
+    </html>
