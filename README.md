@@ -1,12 +1,12 @@
 # Documentation Link:
-https://github.com/Poojashree123456/nginx-pooja.git
+[https://github.com/Poojashree123456/pooja-documentation.git](https://github.com/Poojashree123456/pooja-documentation.git)
 
 # Nginx
 It is free, open-source software that can be used as a web server, reverse proxy, load balancer and HTTP cache.
 
 ## Nginx hands on :   
 This link includes the documnetation and the code to understand how nginx works as a server and a load balancer.
-[https://github.com/Poojashree123456/nginx-pooja.git](https://github.com/Poojashree123456/nginx-pooja.git)
+[https://github.com/Poojashree123456/pooja-documentation.git](https://github.com/Poojashree123456/pooja-documentation.git)
 
 ### Website Links:  
 Nginx doccumentation: [https://nginx.org/en/docs/](https://nginx.org/en/docs/)  
@@ -25,6 +25,8 @@ Nginx Context: [https://youtu.be/C5kMgshNc6g](https://youtu.be/C5kMgshNc6g)
 Nginx as Load Balanacer: [https://youtu.be/a41jxGP9Ic8](https://youtu.be/a41jxGP9Ic8) 
 
 # Docker
+
+[https://github.com/Poojashree123456/pooja-documentation.git](https://github.com/Poojashree123456/pooja-documentation.git)  
 
 It is virtualization software that is used to build, deploy and run the applications easily. 
 Docker packages the applications with all necessary dependencies, libraries, and system tools together into the container.
