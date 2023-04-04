@@ -25,7 +25,7 @@ Nginx Context: [https://youtu.be/C5kMgshNc6g](https://youtu.be/C5kMgshNc6g)
 Nginx as Load Balanacer: [https://youtu.be/a41jxGP9Ic8](https://youtu.be/a41jxGP9Ic8) 
 
 
-# Docker CHanged
+# Docker
 
 [https://github.com/Poojashree123456/pooja-documentation.git](https://github.com/Poojashree123456/pooja-documentation.git)
 
