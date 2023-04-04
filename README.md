@@ -42,6 +42,7 @@ Docker Image Layers: [https://sweetcode.io/understanding-docker-image-layers/#:~
 Differet dockerfile commands: [https://www.baeldung.com/ops/dockerfile-run-cmd-entrypoint](https://www.baeldung.com/ops/dockerfile-run-cmd-entrypoint)  
 Docker Cache: [https://www.baeldung.com/linux/docker-build-cache](https://www.baeldung.com/linux/docker-build-cache)  
 Docker Scratch: [https://codeburst.io/docker-from-scratch-2a84552470c8](https://codeburst.io/docker-from-scratch-2a84552470c8)  
+CheatSheet: [https://github.com/wsargent/docker-cheat-sheet#dockerfile](https://github.com/wsargent/docker-cheat-sheet#dockerfile)  
 
 ## Youtube Links:
 Code With Mosh: [https://youtu.be/pTFZFxd4hOI](https://youtu.be/pTFZFxd4hOI)  
