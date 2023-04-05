@@ -80,7 +80,7 @@ DockerFile Practices: [https://youtu.be/JofsaZ3H1qM](https://youtu.be/JofsaZ3H1q
 
 
 ## Website Links:
-Architecture:  [https://www.redhat.com/en/topics/containers/kubernetes-architecture](https://www.redhat.com/en/topics/containers/kubernetes-architecture)  
+Architecture:  [https://spot.io/resources/kubernetes-architecture/11-core-components-explained/](https://spot.io/resources/kubernetes-architecture/11-core-components-explained/)  
 Components:  [https://kubernetes.io/docs/concepts/overview/components/](https://kubernetes.io/docs/concepts/overview/components/)  
 Inner Working: [https://www.cncf.io/blog/2017/11/07/joe-beda-explains-inner-workings-kubernetes/](https://www.cncf.io/blog/2017/11/07/joe-beda-explains-inner-workings-kubernetes/)  
 Namespace: [https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)  
